@@ -1,0 +1,323 @@
+* {
+	margin: 0;
+  	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	background: white;
+	font-family: "Open Sans", sans-serif;
+	font-size: 16px;
+}
+
+.contenedor {
+	width: 90%;
+	max-width: 1000px;
+	margin: auto;
+
+	overflow: hidden;
+}
+
+.ir-arriba {
+	display: none;
+	padding: 10px;
+	background:#024959;
+	font-size: 20px;
+	color: white;
+	cursor: pointer;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+}
+
+/*--- --- HEADER --- ---*/
+
+header {
+	background: url('../img/bg.jpg') #49A3D6;
+	background-repeat:no-repeat;
+	background-position: center;
+	max-height: 600px;
+}
+
+header .menu {
+	margin: 40px 0px;
+	text-align: right;
+}
+
+header .menu a {
+	margin: 0px 20px;
+	color: white;
+	padding-bottom: 9px;
+	display: inline-block;
+	text-decoration: none;
+	border-bottom: 2px solid transparent;
+	font-size: 1em; /*16px*/
+}
+
+header .menu a:hover {
+	border-bottom: 2px solid white;
+}
+
+header .contenedor-texto {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	margin: 100px 0px; /*190px*/
+}
+
+header .contenedor-texto .texto {
+	border: 2px solid rgba(255, 255, 255, .5);
+	border-radius: 3px;
+	display: inline-block;
+	text-align: center;
+	padding: 20px 60px;
+}
+
+header .contenedor-texto .texto h1,
+header .contenedor-texto .texto h2 {
+	color: white;
+	font-weight: 300;
+	margin: 0px;
+}
+
+header .contenedor-texto .texto .nombre {
+	margin-bottom: 10px;
+	font-size: 50px;
+	line-height: 50px;
+}
+
+header .contenedor-texto .texto .profesion {
+	font-size: 25px;
+	line-height: 25px;
+}
+
+/*--- --- MAIN --- ---*/
+.main .contenedor { /*Sobre escribir los contenedores desbordados a visible*/
+	overflow: visible;
+}
+
+.main .acerca-de {
+	text-align: center;
+}
+
+.main .acerca-de .foto {
+	margin-top: -60px;
+}
+
+.main .acerca-de .foto img {
+	vertical-align: top;
+	border-radius: 50%;
+	border: 5px solid rgba(255, 255, 255, .3);
+}
+
+.main .acerca-de .texto {
+	color: #5A5A5A;
+	font-weight: 600;
+	font-size: 1em;
+	line-height: 30px;
+	width: 80%;
+	margin: 40px auto 60px auto;
+}
+
+.main .acerca-de .texto .titulo {
+	font-size: 34px;
+	line-height: 34px;
+	margin-bottom: 40px;
+	font-weight: 300;
+	color: #3E5FB7;
+	text-align: center;
+}
+
+.main .acerca-de .texto .bold {
+	color: #3895EA;
+	text-decoration: underline;
+}
+
+.main .trabajos {
+	background: #F2F2F2;
+	padding: 60px 0px;
+}
+
+.main .trabajos .contenedor {
+	overflow: hidden;
+}
+
+.main .trabajos .titulo {
+	font-size: 34px;
+	line-height: 34px;
+	margin-bottom: 30px; /*40*/
+	font-weight: 300;
+	color: #323068;
+	text-align: center;
+}
+
+.main .trabajos .contenedor-trabajos {
+	display: flex;
+	flex-direction: row; /*Tipo filas*/
+	flex-wrap: wrap; /*Si no caben se pongan en una nueva linea*/
+	justify-content: space-between; /*Los artículos tendran espacio entre ellos
+	siempre y cuando  los elementos no utilizan todo el espacio disponible en el eje principal*/
+}
+
+.main .trabajos .contenedor-trabajos .trabajo {
+	width: 23%; /*Obtenemos cuatro elementos en una fila*/
+	margin-bottom: 20px; /*40px*/
+}
+
+.main .trabajos .contenedor-trabajos .trabajo .thumb {
+	width: 100%;
+	margin-bottom: 8px;
+}
+
+.main .trabajos .contenedor-trabajos .trabajo .thumb img {
+	width: 100%;
+	vertical-align: top;
+	border-radius: 3px;
+}
+
+.main .trabajos .contenedor-trabajos .trabajo .descripcion {
+	text-align: center;
+}
+
+.main .trabajos .contenedor-trabajos .trabajo .descripcion .nombre {
+	font-weight: 700;
+	color: #3895EA;
+	margin-bottom: 10px;
+}
+
+.main .trabajos .contenedor-trabajos .trabajo .descripcion .categoria {
+	font-size: 14px;
+	color: #636363;
+}
+
+/*--- --- FOOTER --- ---*/
+
+footer .contacto {
+	padding: 60px 0px;
+}
+
+footer .contacto .titutlo {
+	font-size: 34px;
+	line-height: 34px;
+	margin-bottom: 40px;
+	font-weight: 300;
+	color: #3E5FB7;
+	text-align: center;
+}
+
+footer .contacto .formulario {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+footer .contacto .formulario input[type="text"],
+footer .contacto .formulario input[type="email"],
+footer .contacto .formulario textarea {
+	border: 2px solid #A4A4A4;
+	border-radius: 5px;
+	padding: 15px 20px;
+	font-size: 20px;
+	color: #848484;
+}
+
+footer .contacto .formulario input[type="text"]:focus,
+footer .contacto .formulario input[type="email"]:focus,
+footer .contacto .formulario textarea:focus {
+	border: 2px solid #3E5FB7;
+}
+
+footer .contacto .formulario input[type="text"],
+footer .contacto .formulario input[type="email"] {
+	width: 49%; /*Espaciado entre los input*/
+	margin-bottom: 15px;
+}
+
+footer .contacto .formulario textarea {
+	width: 100%;
+	height: 100px;
+	min-width: 100%;
+	max-width: 100%;
+
+	min-height: 100px;
+	max-height: 300px;
+
+	margin-bottom: 15px;
+}
+
+footer .contacto .formulario .boton {
+	margin: auto; /*Centrar*/
+	background: #3E5FB7;
+	color: white;
+	border: none;
+	border-radius: 3px;
+	padding: 15px 40px;
+
+	cursor: pointer;
+}
+
+footer .contacto .formulario .boton:hover {
+	background: #387BEA;
+}
+
+footer .redes-sociales {
+	background: #1E2B38;
+	padding: 60px 0px;
+}
+
+footer .redes-sociales .contenedor {
+	display: flex;
+	justify-content: center;
+}
+
+footer .redes-sociales a {
+	color: white;
+	text-align: center;
+	width: 100px;
+	display: block;
+	padding: 15px 0px;
+	border-radius: 3px;
+	font-size: 30px;
+	margin: 0px 20px;
+}
+
+      
+footer .redes-sociales .contenedor .twitter:hover {background: #55ACEE;}
+footer .redes-sociales .contenedor .facebook:hover {background: #3B5998;}
+footer .redes-sociales .contenedor .youtube:hover {background: #CD201F;}
+footer .redes-sociales .contenedor .github:hover {background: #666666;}
+footer .redes-sociales .contenedor .instagram:hover {background: #3F729B;}
+
+/*--- --- MEDIA QUERIES --- ---*/
+@media screen and (max-width: 800px) {
+	header .menu {
+		text-align: center;
+	}
+
+	.main .trabajos .contenedor-trabajos .trabajo {
+		width: 46%;
+	}
+
+}
+
+@media screen and (max-width: 500px) {
+
+	header .contenedor-texto .texto .nombre {
+		font-size: 35px;
+	}
+
+  	header .contenedor-texto .texto .profesion {
+		font-size: 18px;
+	}
+
+	footer .redes-sociales .contenedor {
+		flex-wrap: wrap;
+	}
+
+	footer .redes-sociales .contenedor a {
+		padding: 20px;
+	}
+
+}
